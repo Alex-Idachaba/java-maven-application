@@ -21,10 +21,12 @@ pipeline {
                 }
             }
         }
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
-                    buildImage 'alexdevops31/jenkins-demo-app:jda-5.0'
+                    buildImage 'alexdevops31/jenkins-demo-app:jda-6.0'
+                    dockerLogin()
+                    dockerPush 'alexdevops31/jenkins-demo-app:jda-6.0'
                 }
             }
         }
