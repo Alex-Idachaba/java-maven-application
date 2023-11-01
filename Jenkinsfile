@@ -24,7 +24,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage 'alexdevops31/jenkins-demo-app:jda-4.0'
+                    buildImage 'alexdevops31/jenkins-demo-app:jda-5.0'
                 }
             }
         }
